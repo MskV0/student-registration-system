@@ -4,13 +4,11 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     line-height: 1.6;
 }
-
 /* Header styles */
 header {
     text-align: center;
@@ -19,7 +17,6 @@ header {
     color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-
 /* Main content styles */
 main {
     max-width: 800px;
@@ -29,23 +26,19 @@ main {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
-
 /* Section styles */
 section {
     margin-bottom: 20px;
 }
-
 /* Form styles */
 .form-group {
     margin-bottom: 15px;
 }
-
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
-
 input {
     padding: 10px;
     width: 100%;
@@ -54,12 +47,10 @@ input {
     font-size: 1em;
     transition: border-color 0.3s; /* Transition effect */
 }
-
 input:focus {
     border-color: #007bff;
     outline: none;
 }
-
 /* Button styles */
 button {
     padding: 10px 20px;
@@ -71,16 +62,21 @@ button {
     font-size: 1em;
     transition: background-color 0.3s; /* Transition effect */
 }
-
 button:hover {
     background-color: #0056b3;
 }
-
 /* Table styles */
+.table-container {
+    width: 100%;
+    margin-top: 10px;
+    /* Default state, will be changed by JavaScript when needed */
+    max-height: none;
+    overflow-y: visible;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
 }
 
 th, td {
@@ -92,12 +88,14 @@ th, td {
 th {
     background-color: #007bff;
     color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 td {
     background-color: #f8f9fa;
 }
-
 /* Action button styles */
 td button {
     background-color: #dc3545;
@@ -108,53 +106,44 @@ td button {
     padding: 5px 10px;
     transition: background-color 0.3s; /* Transition effect */
 }
-
 td button:hover {
     background-color: #c82333;
 }
-
 /* Media Queries for responsiveness */
 @media (max-width: 600px) {
     main {
         padding: 10px;
     }
-
     button {
         width: 100%;
     }
-
     input {
         font-size: 0.9em;
     }
 }
-
 /* Flexbox layout for form */
 form {
     display: flex;
     flex-direction: column;
 }
-
 /* Shadow effects */
 header, main {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-
-/* Grid layout for table */
+/* Table layout */
 table {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    width: 100%;
+    table-layout: fixed;
 }
 
 th, td {
     border: 1px solid #dee2e6;
+    word-break: break-word;
 }
-
 /* Animation for table rows */
 tbody tr {
     transition: background-color 0.3s;
 }
-
 tbody tr:hover {
     background-color: #e9ecef; /* Highlight on hover */
 }
